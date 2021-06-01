@@ -1,0 +1,10 @@
+a a M c c l l m m m
+a b M M c l o m o p
+a b b M c l M o M p
+a b b M c l M o M p
+d d M M e M r r M p
+d d e e e M r r M M
+M f f g g g s s M M
+M f f g g g s s M k
+M h h i i M M M M k
+h h i i j j j j k k

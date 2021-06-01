@@ -1,0 +1,10 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+    <RootNamespace>Le_rhum_de_Guybrush_master</RootNamespace>
+    <StartupObject>Le_rhum_de_Guybrush_master.test</StartupObject>
+  </PropertyGroup>
+
+</Project>
