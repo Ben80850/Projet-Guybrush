@@ -1,22 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+using System;
 
-namespace Le_rhum_de_Guybrush_master
+namespace ile
 {
-    class ile
-    {
-        private List<parcelle> parcelles;
-        private int nbparcelle;
-        protected string[,] Carte = new string[10, 10];
-
-    }
-
-    class test
+    class Chifrement
     {
         static void Main(string[] args)
         {
-
             int x = 0;
 
             string[] Carte = new string[12]; // carte 
@@ -24,7 +13,7 @@ namespace Le_rhum_de_Guybrush_master
             int[] CarteXm = new int[12];// carte x-
 
 
-            Carte[0] = "0";                    //tableau test
+            //tableau test
             Carte[1] = "a";
             Carte[2] = "a";
             Carte[3] = "M";
@@ -35,7 +24,7 @@ namespace Le_rhum_de_Guybrush_master
             Carte[8] = "F";
             Carte[9] = "M";
             Carte[10] = "M";
-            Carte[11] = "0";
+
 
 
             for (x = 1; x <= 10; x++) // pour ouest
@@ -64,7 +53,7 @@ namespace Le_rhum_de_Guybrush_master
                     CarteX[x] = 40;
                 }
 
-                if (Carte[x] != "M" && Carte[x] != Carte[x + 1] && Carte[x] != "F")
+                if (Carte[x] != "M" && Carte[x] != Carte[x + 1] && Carte[x] != "F" || x == 10 && Carte[x] != "M" && Carte[x] != "F")
                 {
                     CarteX[x] = 8;
                 }
@@ -104,12 +93,3 @@ namespace Le_rhum_de_Guybrush_master
         }
     }
 }
-
-
-
-
-
-
-
-
-
