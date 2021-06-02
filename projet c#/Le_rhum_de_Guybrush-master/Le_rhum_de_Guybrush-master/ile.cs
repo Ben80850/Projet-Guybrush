@@ -1,14 +1,22 @@
 using System;
+using System.Collections.Generic;
 
 namespace ile //appel par ile.chifrement
 {
-    class Chifrement
+    class Ile
     {
+        
+    }
+    
+    class Chifrement : Ile
+    {
+       
         static void Main(string[] args)
         {
-            int x = 0;
-
-            string[] Carte = new string[12]; // carte 
+            
+        int x = 0;
+          
+        string[] Carte = new string[12]; // carte 
             int[] CarteX = new int[12]; // carte x+
             int[] CarteXm = new int[12];// carte x-
 
@@ -82,14 +90,14 @@ namespace ile //appel par ile.chifrement
                 }
 
             }
-
-            for (x = 1; x <= 10; x++) //afichage 
+             
+            for (x = 1; x <= 9; x++) //afichage 
             {
-                CarteX[x] = CarteX[x] + CarteXm[x]; //fusion valeur est + ouest 
+                CarteX[x] = CarteX[x] + CarteXm[x]; //fusion valeur est + ouest      
 
-                Console.WriteLine("case {1} = {0};", CarteX[x], x);
+                Console.Write("{0}:", CarteX[x]);
             }
-
+            Console.Write("{0}|", CarteX[10]);//affichage de fin de ligne
         }
     }
 }
