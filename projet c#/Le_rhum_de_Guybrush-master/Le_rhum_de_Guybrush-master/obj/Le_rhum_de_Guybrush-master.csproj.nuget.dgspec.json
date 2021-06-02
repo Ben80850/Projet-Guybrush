@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\BN\\Documents\\Cours\\S2\\concept Objet\\Td\\Projet\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {}
+    "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {}
   },
   "projects": {
-    "C:\\Users\\BN\\Documents\\Cours\\S2\\concept Objet\\Td\\Projet\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {
+    "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\BN\\Documents\\Cours\\S2\\concept Objet\\Td\\Projet\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+        "projectUniqueName": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
         "projectName": "Le_rhum_de_Guybrush-master",
-        "projectPath": "C:\\Users\\BN\\Documents\\Cours\\S2\\concept Objet\\Td\\Projet\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
-        "packagesPath": "C:\\Users\\BN\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\BN\\Documents\\Cours\\S2\\concept Objet\\Td\\Projet\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
+        "projectPath": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+        "packagesPath": "C:\\Users\\FaonCiel\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\BN\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\FaonCiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -54,7 +54,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }
