@@ -1,6 +1,6 @@
 using System;
 
-namespace ile
+namespace ile //appel par ile.chifrement
 {
     class Chifrement
     {
