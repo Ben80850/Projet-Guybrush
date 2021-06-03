@@ -33,6 +33,13 @@ namespace Le_rhum_de_Guybrush_master
 
                         System.Threading.Thread.Sleep(5000);
 
+                    // Carte clair
+                    InitCarte AffichageCarte = new InitCarte();
+                    AffichageCarte.Carte();
+
+                    Console.WriteLine();
+
+                    //Carte Chiffré
                     Chiffrement Changement = new Chiffrement();
                     Changement.chiffrement();
                        
