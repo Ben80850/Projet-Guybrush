@@ -1,8 +1,44 @@
 using System;
 using System.Collections.Generic;
+using System.IO;
 
 namespace ile //appel par ile.chifrement
 {
+    class InitCarte
+    {
+        public string[,] TabCarte = new string[10, 10];
+
+        public void Carte()
+        {
+            try
+            {
+                //StreamReader pour lire le fichier
+                using (StreamReader Carte = new StreamReader(@"A:\Tom\IUT\S2\projet c#\map.claire.txt"))
+                {
+                    string line;
+                    // Lire les lignes du fichier jusqu'à la fin.
+                    while ((line = Carte.ReadLine()) != null)
+                    {
+                        for (int i = 0; i < 10; i++)
+                        {
+                            // LIGNES (1 à 10)
+                            for (int j = 0; j < 10; j++)
+                            {
+                                TabCarte[i, j] = line;
+                            }
+                        }
+                        // affichage tableau
+                       // Console.WriteLine(line);
+                    }
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Le fichier n'a pas pu être lu.");
+                Console.WriteLine(e.Message);
+            }
+        }
+    }
     class Ile
     {
         
@@ -100,4 +136,6 @@ namespace ile //appel par ile.chifrement
             Console.Write("{0}|", CarteX[10]);//affichage de fin de ligne
         }
     }
+
+
 }
