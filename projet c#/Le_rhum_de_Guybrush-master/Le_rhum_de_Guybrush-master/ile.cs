@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace ile //appel par ile.chifrement
+namespace Le_rhum_de_Guybrush_master 
 {
     class InitCarte
     {
@@ -41,10 +41,10 @@ namespace ile //appel par ile.chifrement
     }
     
     
-    class Chifrement 
+    class Chiffrement 
     {
 
-        static void Main(string[] args)
+        public void chiffrement()
         {
             int x = 0, y = 0;
 
