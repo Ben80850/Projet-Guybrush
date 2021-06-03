@@ -33,9 +33,11 @@ namespace Le_rhum_de_Guybrush_master
 
                         System.Threading.Thread.Sleep(5000);
 
-                        //ile TabCarte = new ile();
-                        //TabCarte.ILE();
-
+                    Chiffrement Changement = new Chiffrement();
+                    Changement.chiffrement();
+                       
+                        
+                    
                         Quitter();
                         string quitter;
                         quitter = Convert.ToString(Console.ReadLine());
