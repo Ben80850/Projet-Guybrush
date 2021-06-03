@@ -3,39 +3,90 @@ using System.IO;
 
 namespace Le_rhum_de_Guybrush_master
 {
-    class Program
-    {
-        static void Main(string[] args)
+             class Program
         {
-            try
+            public static void Quitter()
             {
-                //StreamReader pour lire le fichier
-                using (StreamReader Carte = new StreamReader(@"C:\Users\BN\Documents\Cours\S2\concept Objet\Td\Projet\projet c#\map.claire.txt"))
+                Console.WriteLine("------------------------------------------------------------------");
+                Console.WriteLine("---------------Voulez vous quittez ? oui / non -------------------");
+                Console.WriteLine("------------------------------------------------------------------");
+            }
+            public static void Deco()
+            {
+                Console.WriteLine("------------------------------------------------------------------");
+            }
+            static void Main(string[] args)
+            {
+                bool menu = true;
+                while (menu == true)
                 {
-                    string line;
-                    string[,] TabCarte = new string[10, 10];
-                    // Lire les lignes du fichier jusqu'à la fin.
-                    while ((line = Carte.ReadLine()) != null)
+                    Deco();
+                    Console.WriteLine("-----------------Voulez vous codez ou décoder ? (1/2)-------------");
+                    Deco();
+                    double choix;
+                    choix = Convert.ToDouble(Console.ReadLine());
+                    if (choix == 1)
                     {
-                        for (int i = 0; i < 10; i++)
+                        Deco();
+                        Console.WriteLine("------Salutation Guybrush votre carte sera crypter dans 5 sec-----");
+                        Deco();
+
+                        System.Threading.Thread.Sleep(5000);
+
+                        //ile TabCarte = new ile();
+                        //TabCarte.ILE();
+
+                        Quitter();
+                        string quitter;
+                        quitter = Convert.ToString(Console.ReadLine());
+                        if (quitter == "oui")
                         {
-                            // LIGNES (1 à 10)
-                            for (int j = 0; j < 10; j++)
-                            {
-                                TabCarte[i, j] = line;
-                            }
+                            menu = false;
                         }
-                        // affichage tableau
-                        Console.WriteLine(line);
+                        else if (quitter == "non")
+                        {
+                            menu = true;
+                            Console.Clear();
+                        }
+                        else
+                        {
+                            Deco();
+                            Console.WriteLine("---------------------Erreur  ----------------");
+                            Deco();
+                        }
+
+                    }
+                    else if (choix == 2)
+                    {
+                        Deco();
+                        Console.WriteLine("------Salutation  Elaine votre carte sera décrypter dans 5 sec----");
+                        Deco();
+                        System.Threading.Thread.Sleep(5000);
+                        Quitter();
+                        string quitter;
+                        quitter = Convert.ToString(Console.ReadLine());
+                        if (quitter == "oui")
+                        {
+                            menu = false;
+                        }
+                        else if (quitter == "non")
+                        {
+                            menu = true;
+                            Console.Clear();
+                        }
+
+                    }
+                    else
+                    {
+                        Deco();
+                        Console.WriteLine("-----------------------Erreur ----------------------------------");
+                        Deco();
+                        System.Threading.Thread.Sleep(5000);
+                        Console.Clear();
                     }
                 }
             }
-            catch (Exception e)
-            {
-                Console.WriteLine("Le fichier n'a pas pu être lu.");
-                Console.WriteLine(e.Message);
-            }
-
         }
     }
-}
+
+
