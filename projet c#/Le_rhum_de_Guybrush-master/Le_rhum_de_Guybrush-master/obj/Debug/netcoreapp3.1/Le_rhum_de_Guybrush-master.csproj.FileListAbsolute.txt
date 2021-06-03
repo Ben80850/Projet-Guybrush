@@ -37,3 +37,16 @@ C:\Users\BN\Documents\Cours\S2\concept Objet\Td\Projet\projet c#\Le_rhum_de_Guyb
 C:\Users\BN\Documents\Cours\S2\concept Objet\Td\Projet\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.dll
 C:\Users\BN\Documents\Cours\S2\concept Objet\Td\Projet\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.pdb
 C:\Users\BN\Documents\Cours\S2\concept Objet\Td\Projet\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.genruntimeconfig.cache
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.csprojAssemblyReference.cache
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.AssemblyInfoInputs.cache
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.AssemblyInfo.cs
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.csproj.CoreCompileInputs.cache
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.dll
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.pdb
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.exe
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.deps.json
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.runtimeconfig.json
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.runtimeconfig.dev.json
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.dll
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\bin\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.pdb
+A:\Tom\IUT\S2\GIT\Projet-Guybrush\projet c#\Le_rhum_de_Guybrush-master\Le_rhum_de_Guybrush-master\obj\Debug\netcoreapp3.1\Le_rhum_de_Guybrush-master.genruntimeconfig.cache

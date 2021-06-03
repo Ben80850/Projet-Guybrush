@@ -8,19 +8,24 @@
     ".NETCoreApp,Version=v3.1": []
   },
   "packageFolders": {
-    "C:\\Users\\FaonCiel\\.nuget\\packages\\": {}
+    "C:\\Users\\Tom\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+      "projectUniqueName": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
       "projectName": "Le_rhum_de_Guybrush-master",
-      "projectPath": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
-      "packagesPath": "C:\\Users\\FaonCiel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\FaonCiel\\Desktop\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
+      "projectPath": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+      "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
+      "outputPath": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
       "projectStyle": "PackageReference",
+      "fallbackFolders": [
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+      ],
       "configFilePaths": [
-        "C:\\Users\\FaonCiel\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Tom\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

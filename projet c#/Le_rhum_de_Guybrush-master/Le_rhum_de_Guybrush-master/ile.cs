@@ -4,7 +4,7 @@ using System.IO;
 
 namespace Le_rhum_de_Guybrush_master 
 {
-    class InitCarte
+    class ile
     {
         public string[,] TabCarte = new string[12, 12];
 
@@ -38,19 +38,10 @@ namespace Le_rhum_de_Guybrush_master
                 Console.WriteLine(e.Message);
             }
         }
-    }
-    
-    
-    class Chiffrement :InitCarte
-    {
-
-        public void chiffrement()
+        public void Chiffrement()
         {
             int x = 0, y = 0;
 
-            string[,] Carte = new string[12, 12]; // carte 
-
-            //Carte[x,y] = Tabcarte[x,y];
             int[,] CarteX = new int[12, 12]; // carte x+
             int[,] CarteXm = new int[12, 12];// carte x-
 
@@ -59,38 +50,38 @@ namespace Le_rhum_de_Guybrush_master
 
 
             //tableau test
-            
+
 
 
             for (y = 1; y <= 10; y++)
             {
                 for (x = 1; x <= 10; x++) // pour ouest
                 {
-                    if (Carte[x, y] == Carte[x + 1, y])
+                    if (TabCarte[x, y] == TabCarte[x + 1, y])
                     {
                         CarteX[x, y] = 0;
 
                     }
-                    if (Carte[x, y] == "M" && Carte[x, y] == Carte[x + 1, y] && Carte[x, y] != "F")
+                    if (TabCarte[x, y] == "M" && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != "F")
                     {
                         CarteX[x, y] = 64;
                     }
-                    if (Carte[x, y] == "F" && Carte[x, y] == Carte[x + 1, y] && Carte[x, y] != "M")
+                    if (TabCarte[x, y] == "F" && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != "M")
                     {
                         CarteX[x, y] = 32;
                     }
 
-                    if (Carte[x, y] == "M" && Carte[x, y] != Carte[x + 1, y] && Carte[x, y] != "F")
+                    if (TabCarte[x, y] == "M" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "F")
                     {
                         CarteX[x, y] = 72;
                     }
 
-                    if (Carte[x, y] == "F" && Carte[x, y] != Carte[x + 1, y] && Carte[x, y] != "M")
+                    if (TabCarte[x, y] == "F" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "M")
                     {
                         CarteX[x, y] = 40;
                     }
 
-                    if (Carte[x, y] != "M" && Carte[x, y] != Carte[x + 1, y] && Carte[x, y] != "F" || x == 10 && Carte[x, y] != "M" && Carte[x, y] != "F")
+                    if (TabCarte[x, y] != "M" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "F" || x == 10 && TabCarte[x, y] != "M" && TabCarte[x, y] != "F")
                     {
                         CarteX[x, y] = 8;
                     }
@@ -101,21 +92,21 @@ namespace Le_rhum_de_Guybrush_master
             {
                 for (x = 1; x <= 10; x++) // pour EST
                 {
-                    if (Carte[x, y] == Carte[x - 1, y])
+                    if (TabCarte[x, y] == TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 0;
                     }
-                    if (Carte[x, y] == "M" && Carte[x, y] == Carte[x - 1, y] || Carte[x, y] == "F" && Carte[x, y] == Carte[x - 1, y])
+                    if (TabCarte[x, y] == "M" && TabCarte[x, y] == TabCarte[x - 1, y] || TabCarte[x, y] == "F" && TabCarte[x, y] == TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 0;
                     }
 
-                    if (Carte[x, y] == "M" && Carte[x, y] != Carte[x - 1, y] || Carte[x, y] == "F" && Carte[x, y] != Carte[x - 1, y])
+                    if (TabCarte[x, y] == "M" && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] == "F" && TabCarte[x, y] != TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 2;
                     }
 
-                    if (Carte[x, y] != "M" && Carte[x, y] != Carte[x - 1, y] || Carte[x, y] != "F" && Carte[x, y] != Carte[x - 1, y])
+                    if (TabCarte[x, y] != "M" && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] != "F" && TabCarte[x, y] != TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 2;
                     }
@@ -129,13 +120,13 @@ namespace Le_rhum_de_Guybrush_master
             {
                 for (x = 1; x <= 10; x++) // haut
                 {
-                    if (Carte[x, y] != Carte[x, y + 1])
+                    if (TabCarte[x, y] != TabCarte[x, y + 1])
                     {
                         CarteY[x, y] = 0;
 
                     }
 
-                    if (Carte[x, y] == Carte[x, y + 1])
+                    if (TabCarte[x, y] == TabCarte[x, y + 1])
                     {
                         CarteY[x, y] = 1;
 
@@ -146,7 +137,7 @@ namespace Le_rhum_de_Guybrush_master
             }
 
 
-            for (y = 1; y <= 2; y++)
+            for (y = 1; y <= 10; y++)
             {
                 for (x = 1; x <= 10; x++) //afichage 
                 {
@@ -159,6 +150,7 @@ namespace Le_rhum_de_Guybrush_master
             }
         }
     }
+    
 
 
 }
