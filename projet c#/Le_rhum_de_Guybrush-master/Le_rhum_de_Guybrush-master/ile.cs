@@ -6,20 +6,20 @@ namespace Le_rhum_de_Guybrush_master
 {
     class InitCarte
     {
-        public string[,] TabCarte = new string[10, 10];
+        public string[,] TabCarte = new string[12, 12];
 
         public void Carte()
         {
             try
             {
                 //StreamReader pour lire le fichier
-                using (StreamReader Carte = new StreamReader(@"A:\Tom\IUT\S2\projet c#\map.claire.txt"))
+                using (StreamReader Carte = new StreamReader(@"../../../../../map.claire.txt"))
                 {
                     string line;
                     // Lire les lignes du fichier jusqu'à la fin.
                     while ((line = Carte.ReadLine()) != null)
                     {
-                        for (int i = 0; i < 10; i++)
+                        for (int i = 1; i < 10; i++)
                         {
                             // LIGNES (1 à 10)
                             for (int j = 0; j < 10; j++)
@@ -41,7 +41,7 @@ namespace Le_rhum_de_Guybrush_master
     }
     
     
-    class Chiffrement 
+    class Chiffrement :InitCarte
     {
 
         public void chiffrement()
@@ -49,6 +49,8 @@ namespace Le_rhum_de_Guybrush_master
             int x = 0, y = 0;
 
             string[,] Carte = new string[12, 12]; // carte 
+
+            //Carte[x,y] = Tabcarte[x,y];
             int[,] CarteX = new int[12, 12]; // carte x+
             int[,] CarteXm = new int[12, 12];// carte x-
 
@@ -57,30 +59,10 @@ namespace Le_rhum_de_Guybrush_master
 
 
             //tableau test
-            Carte[1, 1] = "a";
-            Carte[2, 1] = "a";
-            Carte[3, 1] = "b";
-            Carte[4, 1] = "b";
-            Carte[5, 1] = "M";
-            Carte[6, 1] = "M";
-            Carte[7, 1] = "M";
-            Carte[8, 1] = "F";
-            Carte[9, 1] = "F";
-            Carte[10, 1] = "c";
-
-            Carte[1, 2] = "a";
-            Carte[2, 2] = "a";
-            Carte[3, 2] = "b";
-            Carte[4, 2] = "b";
-            Carte[5, 2] = "M";
-            Carte[6, 2] = "M";
-            Carte[7, 2] = "M";
-            Carte[8, 2] = "F";
-            Carte[9, 2] = "F";
-            Carte[10, 2] = "c";
+            
 
 
-            for (y = 1; y <= 2; y++)
+            for (y = 1; y <= 10; y++)
             {
                 for (x = 1; x <= 10; x++) // pour ouest
                 {
@@ -115,7 +97,7 @@ namespace Le_rhum_de_Guybrush_master
                 }
             }
 
-            for (y = 1; y <= 2; y++)
+            for (y = 1; y <= 10; y++)
             {
                 for (x = 1; x <= 10; x++) // pour EST
                 {
@@ -143,7 +125,7 @@ namespace Le_rhum_de_Guybrush_master
 
 
 
-            for (y = 1; y <= 2; y++)
+            for (y = 1; y <= 10; y++)
             {
                 for (x = 1; x <= 10; x++) // haut
                 {
