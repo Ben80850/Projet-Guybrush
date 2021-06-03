@@ -28,7 +28,7 @@ namespace Le_rhum_de_Guybrush_master
                             }
                         }
                         // affichage tableau
-                       // Console.WriteLine(line);
+                      Console.WriteLine(line);
                     }
                 }
             }
