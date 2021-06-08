@@ -6,36 +6,28 @@ namespace Le_rhum_de_Guybrush_master
 {
     class ile
     {
-        public string[,] TabCarte = new string[12, 12];
+        char[,] TabCarte = new char[11, 11];
 
         public void Carte()
         {
-            try
+
+            
+            string carte = File.ReadAllText(@"../../../../../map.claire.txt");
+            char[] CarteChar = carte.ToCharArray();
+
+            int x = 0;
+            int y = 0;
+            int n = 0;
+            for (y = 0; y < 10; y++)
             {
-                //StreamReader pour lire le fichier
-                using (StreamReader Carte = new StreamReader(@"../../../../../map.claire.txt"))
+                for (x = 0; x < 10; x++)
                 {
-                    string line;
-                    // Lire les lignes du fichier jusqu'à la fin.
-                    while ((line = Carte.ReadLine()) != null)
-                    {
-                        for (int i = 1; i < 10; i++)
-                        {
-                            // LIGNES (1 à 10)
-                            for (int j = 0; j < 10; j++)
-                            {
-                                TabCarte[i, j] = line;
-                            }
-                        }
-                        // affichage tableau
-                      Console.WriteLine(line);
-                    }
+
+                    TabCarte[y, x] = CarteChar[n];
+                    n++;
                 }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("Le fichier n'a pas pu être lu.");
-                Console.WriteLine(e.Message);
+
+
             }
         }
         public void Chiffrement()
@@ -62,26 +54,26 @@ namespace Le_rhum_de_Guybrush_master
                         CarteX[x, y] = 0;
 
                     }
-                    if (TabCarte[x, y] == "M" && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != "F")
+                    if (TabCarte[x, y] == 'M' && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != 'F')
                     {
                         CarteX[x, y] = 64;
                     }
-                    if (TabCarte[x, y] == "F" && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != "M")
+                    if (TabCarte[x, y] == 'F' && TabCarte[x, y] == TabCarte[x + 1, y] && TabCarte[x, y] != 'M')
                     {
                         CarteX[x, y] = 32;
                     }
 
-                    if (TabCarte[x, y] == "M" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "F")
+                    if (TabCarte[x, y] == 'M' && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != 'F')
                     {
                         CarteX[x, y] = 72;
                     }
 
-                    if (TabCarte[x, y] == "F" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "M")
+                    if (TabCarte[x, y] == 'F' && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != 'M')
                     {
                         CarteX[x, y] = 40;
                     }
 
-                    if (TabCarte[x, y] != "M" && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != "F" || x == 10 && TabCarte[x, y] != "M" && TabCarte[x, y] != "F")
+                    if (TabCarte[x, y] != 'M' && TabCarte[x, y] != TabCarte[x + 1, y] && TabCarte[x, y] != 'F' || x == 10 && TabCarte[x, y] != 'M' && TabCarte[x, y] != 'F')
                     {
                         CarteX[x, y] = 8;
                     }
@@ -96,17 +88,17 @@ namespace Le_rhum_de_Guybrush_master
                     {
                         CarteXm[x, y] = 0;
                     }
-                    if (TabCarte[x, y] == "M" && TabCarte[x, y] == TabCarte[x - 1, y] || TabCarte[x, y] == "F" && TabCarte[x, y] == TabCarte[x - 1, y])
+                    if (TabCarte[x, y] == 'M' && TabCarte[x, y] == TabCarte[x - 1, y] || TabCarte[x, y] == 'F' && TabCarte[x, y] == TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 0;
                     }
 
-                    if (TabCarte[x, y] == "M" && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] == "F" && TabCarte[x, y] != TabCarte[x - 1, y])
+                    if (TabCarte[x, y] == 'M' && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] == 'F' && TabCarte[x, y] != TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 2;
                     }
 
-                    if (TabCarte[x, y] != "M" && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] != "F" && TabCarte[x, y] != TabCarte[x - 1, y])
+                    if (TabCarte[x, y] != 'M' && TabCarte[x, y] != TabCarte[x - 1, y] || TabCarte[x, y] != 'F' && TabCarte[x, y] != TabCarte[x - 1, y])
                     {
                         CarteXm[x, y] = 2;
                     }
