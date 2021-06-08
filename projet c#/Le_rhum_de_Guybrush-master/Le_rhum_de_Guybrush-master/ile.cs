@@ -6,7 +6,7 @@ namespace Le_rhum_de_Guybrush_master
 {
     class ile
     {
-        char[,] TabCarte = new char[11, 11];
+        char[,] TabCarte = new char[12, 12];
 
         public void Carte()
         {
