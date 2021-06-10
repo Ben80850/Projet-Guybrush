@@ -34,8 +34,9 @@ namespace Le_rhum_de_Guybrush_master
                         System.Threading.Thread.Sleep(5000);
 
                     // Carte clair
+                    string carte = File.ReadAllText(@"../../../../../map.claire.txt");
                     ile AfficherTableau = new ile();
-                    AfficherTableau.Carte();
+                    AfficherTableau.Carte(carte);
 
                     Console.WriteLine();
 

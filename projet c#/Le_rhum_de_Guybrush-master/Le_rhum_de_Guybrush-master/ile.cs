@@ -8,11 +8,8 @@ namespace Le_rhum_de_Guybrush_master
     {
         char[,] TabCarte = new char[12, 12];
 
-        public void Carte()
+        public void Carte(string carte)
         {
-
-            
-            string carte = File.ReadAllText(@"../../../../../map.claire.txt");
             char[] CarteChar = carte.ToCharArray();
 
             int x = 0;
