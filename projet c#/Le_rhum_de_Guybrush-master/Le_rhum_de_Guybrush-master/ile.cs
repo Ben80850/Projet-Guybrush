@@ -2,7 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 
-namespace Le_rhum_de_Guybrush_master 
+namespace Le_rhum_de_Guybrush_master
 {
     class ile
     {
@@ -33,8 +33,8 @@ namespace Le_rhum_de_Guybrush_master
                 }
                 Console.WriteLine();
             }
-  
-            }
+
+        }
         public void Chiffrement()
         {
             int x = 0, y = 0;
@@ -63,7 +63,7 @@ namespace Le_rhum_de_Guybrush_master
                         CarteX[y, x] = 32;
                     }
 
-                    if (TabCarte[y,x] == 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F')
+                    if (TabCarte[y, x] == 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F')
                     {
                         CarteX[y, x] = 72;
                     }
@@ -73,7 +73,7 @@ namespace Le_rhum_de_Guybrush_master
                         CarteX[y, x] = 40;
                     }
 
-                    if (TabCarte[y, x] != 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F' || y== 10 && TabCarte[y, x] != 'M' && TabCarte[y, x] != 'F')
+                    if (TabCarte[y, x] != 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F' || y == 10 && TabCarte[y, x] != 'M' && TabCarte[y, x] != 'F')
                     {
                         CarteX[y, x] = 8;
                     }
@@ -130,7 +130,7 @@ namespace Le_rhum_de_Guybrush_master
             {
                 for (x = 1; x < 11; x++) //afichage 
                 {
-                    
+
                     /*
                      CarteX[y, x] = CarteX[y, x] + CarteXm[y, x]; //fusion valeur est + ouest 
                      CarteX[y, x] = CarteX[y, x] + CarteY[y, x];
@@ -139,12 +139,91 @@ namespace Le_rhum_de_Guybrush_master
 
                      */
                 }
-               // Console.WriteLine();
+                // Console.WriteLine();
             }
         }
     }
 
     public void Déchiffrement()
+    {
+
+
+        int x = 0;
+        int y = 0;
+
+
+        int[,] Carte = new int[10, 10]; // carte 
+        char[,] CarteX = new char[10, 10];
+
+
+        for (y = 0; y < 10; y++)
+        {
+            for (x = 0; x < 10; x++)
+            {
+
+                if (Carte[y, x] >= 64)
+                {
+                    CarteX[y, x] = 'M';
+                }
+                if (Carte[y, x] >= 32 && Carte[y, x] < 64)
+                {
+                    CarteX[y, x] = 'F';
+                }
+
+                if (Carte[y, x] > 0 && Carte[y, x] < 15)
+                {
+                    if (Carte[y, x] == 1 + 2 | Carte[y, x] == 2 | Carte[y, x] == 4 + 2) //1= 2^0 et 2= 2^1
+                    {
+                        CarteX[y, x] = 'a';
+                        CarteX[y, x + 1] = 'a';
+                    }
+                    if (Carte[y, x] == 8 + 4 | Carte[y, x] == 8 + 1) //8= 2^3 et 4= 2^2
+                    {
+                        CarteX[y, x] = 'b';
+
+                    }
+                    if (Carte[y, x] == 8 + 2 || Carte[y, x] == 8 + 2 + 1) //8= 2^3 et 4= 2^2
+                    {
+                        CarteX[y, x] = 'c';
+
+                    }
+
+                    if (Carte[y, x] == 8 + 4 + 4 | Carte[y, x] == 8 + 2 + 4) //8= 2^3 et 4= 2^2
+                    {
+                        CarteX[y, x] = 'j';
+
+                    }
+                    if (Carte[y, x] == 1 + 4 + 2 | Carte[y, x] == 8 + 4 + 1)
+                    {
+                        CarteX[y, x] = 'h';
+
+                    }
+
+
+
+
+                }
+
+            }
+        }
+
+
+        for (y = 0; y < 10; y++)
+        {
+            for (x = 0; x < 10; x++)
+            {
+
+                Console.Write("{0}", CarteX[y, x]);
+            }
+            Console.WriteLine();
+
+
+        }
+
+    
+    }
+}
+    }
     
 
 
