@@ -31,9 +31,10 @@ namespace Le_rhum_de_Guybrush_master
                         Console.WriteLine("------Salutation Guybrush votre carte sera crypter dans 5 sec-----");
                         Deco();
 
-                        System.Threading.Thread.Sleep(5000);
-
-                    // Carte clair
+                       // System.Threading.Thread.Sleep(5000); /*A remettre avant rendue*/
+                    /*--------------------------------------------------------------------------------------*/
+                    /*-------------------------------- Carte clair------------------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
                     string carte = File.ReadAllText(@"../../../../../map.claire.txt");
                     ile AfficherTableau = new ile();
                     AfficherTableau.Carte(carte);
@@ -43,10 +44,10 @@ namespace Le_rhum_de_Guybrush_master
                     //Carte Chiffré
                     ile Chiffré = new ile();
                     Chiffré.Chiffrement();
-                       
-                        
-                    
-                        Quitter();
+                    /*--------------------------------------------------------------------------------------*/
+                    /*-------------------------------- Fin Carte clair--------------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+                    Quitter();
                         string quitter;
                         quitter = Convert.ToString(Console.ReadLine());
                         if (quitter == "oui")
@@ -71,8 +72,19 @@ namespace Le_rhum_de_Guybrush_master
                         Deco();
                         Console.WriteLine("------Salutation  Elaine votre carte sera décrypter dans 5 sec----");
                         Deco();
-                        System.Threading.Thread.Sleep(5000);
-                        Quitter();
+
+                    //System.Threading.Thread.Sleep(5000);/*A remettre avant rendue*/
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------  Carte chiffré---------------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+
+                    ile Dechiffrer = new ile();
+                    Dechiffrer.Dechiffrement();
+
+                    /*--------------------------------------------------------------------------------------*/
+                    /*--------------------------------  Fin Carte chiffré-----------------------------------*/
+                    /*--------------------------------------------------------------------------------------*/
+                    Quitter();
                         string quitter;
                         quitter = Convert.ToString(Console.ReadLine());
                         if (quitter == "oui")
