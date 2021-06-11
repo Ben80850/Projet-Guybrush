@@ -143,6 +143,8 @@ namespace Le_rhum_de_Guybrush_master
             }
         }
     }
+
+    public void Déchiffrement()
     
 
 
