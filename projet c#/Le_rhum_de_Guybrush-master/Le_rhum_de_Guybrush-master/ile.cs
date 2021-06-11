@@ -7,14 +7,18 @@ namespace Le_rhum_de_Guybrush_master
     class ile
     {
         char[,] TabCarte = new char[12, 12];
+        int[,] CarteX = new int[12, 12];
+        int[,] CarteXm = new int[12, 12];
+        int[,] CarteY = new int[12, 12];
+        int x;
+        int y;
+        int n;
 
         public void Carte(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
 
-            int x = 0;
-            int y = 0;
-            int n = 0;
+            
             for (y = 1; y < 11; y++)
             {
                 for (x = 1; x < 11; x++)
@@ -25,122 +29,100 @@ namespace Le_rhum_de_Guybrush_master
                 }
             }
 
-            for (y = 1; y < 11; y++)
-            {
-                for (x = 1; x < 11; x++) //afichage 
-                {
-                    Console.Write(TabCarte[y, x]);
-                }
-                Console.WriteLine();
-            }
-
         }
         public void Chiffrement()
         {
-            int x = 0, y = 0;
+           
 
-            int[,] CarteX = new int[12, 12]; // carte x+
-            int[,] CarteXm = new int[12, 12];// carte x-
 
-            int[,] CarteY = new int[12, 12]; // carte y+
-            int[,] CarteYm = new int[12, 12];// carte y--
-
-            for (y = 1; y < 11; y++)
+            for (y = 1; y < 11; y++)            //chifrement frontière est
             {
-                for (x = 1; x < 11; x++) // pour ouest
+                for (x = 1; x < 11; x++)
                 {
-                    if (TabCarte[y, x] == TabCarte[y + 1, x])
+                    if ((TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('M')) == true)
+
                     {
                         CarteX[y, x] = 0;
-
                     }
-                    if (TabCarte[y, x] == 'M' && TabCarte[y, x] == TabCarte[y + 1, x] && TabCarte[y, x] != 'F')
+
+                    if (TabCarte[y, x].Equals('M') && TabCarte[y, x].Equals(TabCarte[y, x + 1]) == true)
                     {
                         CarteX[y, x] = 64;
                     }
-                    if (TabCarte[y, x] == 'F' && TabCarte[y, x] == TabCarte[y + 1, x] && TabCarte[y, x] != 'M')
+
+                    if ((TabCarte[y, x].Equals('F') && TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('M')) == true)
                     {
                         CarteX[y, x] = 32;
                     }
 
-                    if (TabCarte[y, x] == 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F')
+                    if ((TabCarte[y, x].Equals('M') && !TabCarte[y, x].Equals(TabCarte[y, x + 1]) || TabCarte[y, x].Equals('M') && TabCarte[y, x + 1].Equals("\r") == true))
                     {
                         CarteX[y, x] = 72;
                     }
 
-                    if (TabCarte[y, x] == 'F' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'M')
+                    if ((TabCarte[y, x].Equals('F') && !TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('M')) == true)
                     {
                         CarteX[y, x] = 40;
                     }
 
-                    if (TabCarte[y, x] != 'M' && TabCarte[y, x] != TabCarte[y + 1, x] && TabCarte[y, x] != 'F' || y == 10 && TabCarte[y, x] != 'M' && TabCarte[y, x] != 'F')
+                    if ((!TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('F') && !TabCarte[y, x].Equals('M')) == true)
+
                     {
                         CarteX[y, x] = 8;
                     }
+
                 }
             }
 
-            for (y = 1; y < 11; y++)
+            for (y = 1; y < 11; y++)            //chifrement frontière Ouest
             {
-                for (x = 1; x < 11; x++) // pour EST
+                for (x = 1; x < 11; x++)
                 {
-                    if (TabCarte[y, x] == TabCarte[y - 1, x])
-                    {
-                        CarteXm[y, x] = 0;
-                    }
-                    if (TabCarte[y, x] == 'M' && TabCarte[y, x] == TabCarte[y - 1, x] || TabCarte[y, x] == 'F' && TabCarte[y, x] == TabCarte[y - 1, x])
+                 
+                    if ((TabCarte[y, x].Equals('M') && TabCarte[y, x].Equals(TabCarte[y, x - 1]) || TabCarte[y, x].Equals('F') && TabCarte[y, x].Equals(TabCarte[y, x - 1])) == true)
                     {
                         CarteXm[y, x] = 0;
                     }
 
-                    if (TabCarte[y, x] == 'M' && TabCarte[y, x] != TabCarte[y - 1, x] || TabCarte[y, x] == 'F' && TabCarte[y, x] != TabCarte[y - 1, x])
+                    if ((TabCarte[y, x].Equals('M') && !TabCarte[y, x].Equals(TabCarte[y, x - 1]) || TabCarte[y, x].Equals('F') && !TabCarte[y, x].Equals(TabCarte[y, x - 1])) == true)
                     {
                         CarteXm[y, x] = 2;
                     }
 
-                    if (TabCarte[y, x] != 'M' && TabCarte[y, x] != TabCarte[y - 1, x] || TabCarte[y, x] != 'F' && TabCarte[y, x] != TabCarte[y - 1, x])
+                    if ((!TabCarte[y, x].Equals('M') && !TabCarte[y, x].Equals(TabCarte[y, x - 1]) || !TabCarte[y, x].Equals('F') && !TabCarte[y, x].Equals(TabCarte[y, x - 1])) == true)
                     {
                         CarteXm[y, x] = 2;
                     }
+
+
                 }
+
             }
 
             for (y = 1; y < 11; y++)
             {
-                for (x = 1; x < 11; x++) // haut
+                for (x = 1; x < 11; x++)
                 {
-                    if (TabCarte[y, x] != TabCarte[y, x + 1])
-                    {
-                        CarteY[y, x] = 0;
 
-                    }
-
-                    if (TabCarte[y, x] == TabCarte[y, x + 1])
+                    if ((!TabCarte[y, x].Equals(TabCarte[y - 1, x])) == true)
                     {
                         CarteY[y, x] = 1;
 
                     }
-
-
                 }
             }
 
-            /*
             for (y = 1; y < 11; y++)
             {
-                for (x = 1; x < 11; x++) //affichage 
+                for (x = 1; x < 11; x++)
                 {
+                    CarteX[y, x] = CarteX[y, x] + CarteXm[y, x];
+                    CarteX[y, x] = CarteX[y, x] + CarteY[y, x];
 
-                    
-                     CarteX[y, x] = CarteX[y, x] + CarteXm[y, x]; //fusion valeur est + ouest 
-                     CarteX[y, x] = CarteX[y, x] + CarteY[y, x];
-                     Console.Write("{0};", CarteX[y, x], y);
-                     Console.WriteLine("| ligne {0}", y);
-
-                     
-        }
-        // Console.WriteLine();
-    }*/
+                    Console.Write("{0};", CarteX[y, x]);
+                }
+                Console.WriteLine("|");
+            }
         }
         public void Dechiffrement()
         {
