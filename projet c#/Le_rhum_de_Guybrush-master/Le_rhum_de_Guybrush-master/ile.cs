@@ -14,11 +14,12 @@ namespace Le_rhum_de_Guybrush_master
         int y;
         int n;
 
-        public void Carte(string carte)
+       
+        public void Chiffrement(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
 
-            
+
             for (y = 1; y < 11; y++)
             {
                 for (x = 1; x < 11; x++)
@@ -28,11 +29,6 @@ namespace Le_rhum_de_Guybrush_master
                     n++;
                 }
             }
-
-        }
-        public void Chiffrement()
-        {
-           
 
 
             for (y = 1; y < 11; y++)            //chifrement frontière est
@@ -124,12 +120,21 @@ namespace Le_rhum_de_Guybrush_master
                 Console.WriteLine("|");
             }
         }
-        public void Dechiffrement()
+        public void Dechiffrement(string carte)
         {
 
+            char[] CarteChar = carte.ToCharArray();
 
-            int x = 0;
-            int y = 0;
+
+            for (y = 1; y < 11; y++)
+            {
+                for (x = 1; x < 11; x++)
+                {
+                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                    TabCarte[y, x] = CarteChar[n];
+                    n++;
+                }
+            }
 
 
             int[,] Carte = new int[10, 10]; // carte 
