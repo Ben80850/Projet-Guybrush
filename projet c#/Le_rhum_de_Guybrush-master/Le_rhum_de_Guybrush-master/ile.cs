@@ -15,18 +15,26 @@ namespace Le_rhum_de_Guybrush_master
             int x = 0;
             int y = 0;
             int n = 0;
-            for (y = 0; y < 10; y++)
+            for (y = 1; y < 11; y++)
             {
-                for (x = 0; x < 10; x++)
+                for (x = 1; x < 11; x++)
                 {
-
+                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
                     TabCarte[y, x] = CarteChar[n];
                     n++;
                 }
-
-
             }
-        }
+
+            for (y = 1; y < 11; y++)
+            {
+                for (x = 1; x < 11; x++) //afichage 
+                {
+                    Console.Write(TabCarte[y, x]);
+                }
+                Console.WriteLine();
+            }
+  
+            }
         public void Chiffrement()
         {
             int x = 0, y = 0;
@@ -37,14 +45,9 @@ namespace Le_rhum_de_Guybrush_master
             int[,] CarteY = new int[12, 12]; // carte y+
             int[,] CarteYm = new int[12, 12];// carte y--
 
-
-            //tableau test
-
-
-
-            for (y = 1; y <= 10; y++)
+            for (y = 1; y < 11; y++)
             {
-                for (x = 1; x <= 10; x++) // pour ouest
+                for (x = 1; x < 11; x++) // pour ouest
                 {
                     if (TabCarte[y, x] == TabCarte[y + 1, x])
                     {
@@ -77,9 +80,9 @@ namespace Le_rhum_de_Guybrush_master
                 }
             }
 
-            for (y = 1; y <= 10; y++)
+            for (y = 1; y < 11; y++)
             {
-                for (x = 1; x <= 10; x++) // pour EST
+                for (x = 1; x < 11; x++) // pour EST
                 {
                     if (TabCarte[y, x] == TabCarte[y - 1, x])
                     {
@@ -102,12 +105,9 @@ namespace Le_rhum_de_Guybrush_master
                 }
             }
 
-
-
-
-            for (y = 1; y <= 10; y++)
+            for (y = 1; y < 11; y++)
             {
-                for (x = 1; x <= 10; x++) // haut
+                for (x = 1; x < 11; x++) // haut
                 {
                     if (TabCarte[y, x] != TabCarte[y, x + 1])
                     {
@@ -126,16 +126,20 @@ namespace Le_rhum_de_Guybrush_master
             }
 
 
-            for (y = 1; y <= 10; y++)
+            for (y = 1; y < 11; y++)
             {
-                for (x = 1; x <= 10; x++) //afichage 
+                for (x = 1; x < 11; x++) //afichage 
                 {
-                    CarteX[y, x] = CarteX[y, x] + CarteXm[y, x]; //fusion valeur est + ouest 
-                    CarteX[y, x] = CarteX[y, x] + CarteY[y, x];
-                    Console.Write("{0};", CarteX[y, x], y);
-                    //Console.WriteLine("| ligne {0}", y);
+                    
+                    /*
+                     CarteX[y, x] = CarteX[y, x] + CarteXm[y, x]; //fusion valeur est + ouest 
+                     CarteX[y, x] = CarteX[y, x] + CarteY[y, x];
+                     Console.Write("{0};", CarteX[y, x], y);
+                     Console.WriteLine("| ligne {0}", y);
+
+                     */
                 }
-                Console.WriteLine();
+               // Console.WriteLine();
             }
         }
     }
