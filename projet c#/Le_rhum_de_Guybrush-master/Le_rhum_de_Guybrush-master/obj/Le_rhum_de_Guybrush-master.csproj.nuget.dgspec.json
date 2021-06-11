@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {}
+    "A:\\Tom\\IUT\\S2\\GIT\\Nouveau dossier\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {}
   },
   "projects": {
-    "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {
+    "A:\\Tom\\IUT\\S2\\GIT\\Nouveau dossier\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+        "projectUniqueName": "A:\\Tom\\IUT\\S2\\GIT\\Nouveau dossier\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
         "projectName": "Le_rhum_de_Guybrush-master",
-        "projectPath": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
+        "projectPath": "A:\\Tom\\IUT\\S2\\GIT\\Nouveau dossier\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master.csproj",
         "packagesPath": "C:\\Users\\Tom\\.nuget\\packages\\",
-        "outputPath": "A:\\Tom\\IUT\\S2\\GIT\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
+        "outputPath": "A:\\Tom\\IUT\\S2\\GIT\\Nouveau dossier\\Projet-Guybrush\\projet c#\\Le_rhum_de_Guybrush-master\\Le_rhum_de_Guybrush-master\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

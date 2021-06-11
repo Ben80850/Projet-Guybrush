@@ -207,7 +207,6 @@ namespace Le_rhum_de_Guybrush_master
 
 
         }
-
         public void Afficher_Ile(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
@@ -223,17 +222,31 @@ namespace Le_rhum_de_Guybrush_master
                 }
             }
 
+
+
             for (y = 1; y < 11; y++)
             {
                 for (x = 1; x < 11; x++)
                 {
+                    if (TabCarte[y, x] == 'M')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Blue;
+                    }
+                    if (TabCarte[y, x] == 'F')
+                    {
+                        Console.ForegroundColor = ConsoleColor.Green;
+                    }
+                    if (TabCarte[y, x] != 'F' && TabCarte[y, x] != 'M')
+                    {
+                        Console.ForegroundColor = ConsoleColor.White;
+                    }
                     Console.Write("{0};", TabCarte[y, x]);
+
                 }
                 Console.WriteLine();
             }
-
-
-
+            Console.ForegroundColor = ConsoleColor.White;
         }
     }
+
 }
