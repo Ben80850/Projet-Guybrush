@@ -147,6 +147,20 @@ namespace Le_rhum_de_Guybrush_master
                 {
                     parcelle Liste = new parcelle();
                     Liste.Affichage_liste_parcelle(carteClaire);
+
+
+                    Quitter();
+                    string quitter;
+                    quitter = Convert.ToString(Console.ReadLine());
+                    if (quitter == "oui")
+                    {
+                        menu = false;
+                    }
+                    else if (quitter == "non")
+                    {
+                        menu = true;
+                        Console.Clear();
+                    }
                 }
 
                 else if (choix == 5)
@@ -156,6 +170,20 @@ namespace Le_rhum_de_Guybrush_master
                     Lettre = Convert.ToChar(Console.ReadLine());
                     parcelle Liste = new parcelle();
                     Liste.Taille_d_une_parcelle(carteClaire, Lettre);
+
+
+                    Quitter();
+                    string quitter;
+                    quitter = Convert.ToString(Console.ReadLine());
+                    if (quitter == "oui")
+                    {
+                        menu = false;
+                    }
+                    else if (quitter == "non")
+                    {
+                        menu = true;
+                        Console.Clear();
+                    }
                 }
 
 
@@ -168,12 +196,40 @@ namespace Le_rhum_de_Guybrush_master
                     Borne = Convert.ToInt32(Console.ReadLine());
                     parcelle Liste = new parcelle();
                     Liste.Affichage_Borne_Sup(carteClaire, Borne);
+
+
+                    Quitter();
+                    string quitter;
+                    quitter = Convert.ToString(Console.ReadLine());
+                    if (quitter == "oui")
+                    {
+                        menu = false;
+                    }
+                    else if (quitter == "non")
+                    {
+                        menu = true;
+                        Console.Clear();
+                    }
                 }
                 else if (choix == 7)
                 {
 
                     parcelle Liste = new parcelle();
                     Liste.Aire_de_l_ile(carteClaire);
+
+
+                    Quitter();
+                    string quitter;
+                    quitter = Convert.ToString(Console.ReadLine());
+                    if (quitter == "oui")
+                    {
+                        menu = false;
+                    }
+                    else if (quitter == "non")
+                    {
+                        menu = true;
+                        Console.Clear();
+                    }
                 }
 
 
