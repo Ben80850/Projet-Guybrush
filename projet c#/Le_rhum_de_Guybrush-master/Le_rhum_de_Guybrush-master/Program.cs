@@ -29,6 +29,9 @@ namespace Le_rhum_de_Guybrush_master
                 Console.WriteLine("--------------------2.Déchiffrement-------------------------------");
                 Console.WriteLine("--------------------3.Afficher la carte --------------------------");
                 Console.WriteLine("--------------------4.Liste Parcelle -----------------------------");
+                Console.WriteLine("--------------------5.Taille d'une parcelle ----------------------");
+                Console.WriteLine("--------------------6.Affichage Parcelle sup a Borne -------------");
+                Console.WriteLine("--------------------7.Aire de l'ile ------------------------------");
 
                 Deco();
                 double choix;
@@ -133,6 +136,41 @@ namespace Le_rhum_de_Guybrush_master
                     parcelle Liste = new parcelle();
                     Liste.Affichage_liste_parcelle(carteClaire);
                 }
+
+                else if (choix == 5)
+                {
+                    char Lettre;
+                    Console.WriteLine("Entrer la lettre a rechercher");
+                    Lettre = Convert.ToChar(Console.ReadLine());
+                    parcelle Liste = new parcelle();
+                    Liste.Taille_d_une_parcelle(carteClaire, Lettre);
+                }
+
+
+
+
+                else if (choix == 6)
+                {
+                    int Borne;
+                    Console.WriteLine("Entrer votre Borne");
+                    Borne = Convert.ToInt32(Console.ReadLine());
+                    parcelle Liste = new parcelle();
+                    Liste.Affichage_Borne_Sup(carteClaire, Borne);
+                }
+                else if (choix == 7)
+                {
+
+                    parcelle Liste = new parcelle();
+                    Liste.Aire_de_l_ile(carteClaire);
+                }
+
+
+
+
+
+
+
+
 
 
                 else
