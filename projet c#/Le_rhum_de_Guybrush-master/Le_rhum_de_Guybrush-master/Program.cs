@@ -54,7 +54,7 @@ namespace Le_rhum_de_Guybrush_master
                     Console.WriteLine("------Salutation Guybrush votre carte sera crypter dans 5 sec-----");
                     Deco();
 
-                    // System.Threading.Thread.Sleep(5000); /*A remettre avant rendue*/
+                     System.Threading.Thread.Sleep(5000); 
                     /*--------------------------------------------------------------------------------------*/
                     /*-------------------------------- Carte clair------------------------------------------*/
                     /*--------------------------------------------------------------------------------------*/
@@ -95,7 +95,7 @@ namespace Le_rhum_de_Guybrush_master
                     Console.WriteLine("------Salutation Elaine votre carte sera déchiffré dans 5 sec-------");
                     Deco();
 
-                    //System.Threading.Thread.Sleep(5000);/*A remettre avant rendue*/
+                    System.Threading.Thread.Sleep(5000);
                     /*--------------------------------------------------------------------------------------*/
                     /*--------------------------------  Carte chiffré---------------------------------------*/
                     /*--------------------------------------------------------------------------------------*/
