@@ -3,16 +3,22 @@ using System.Collections.Generic;
 using System.Text;
 
 namespace Le_rhum_de_Guybrush_master
-{
+{ 
+    /// <summary>
+    /// Class parcelle : modélise les parcelles
+    /// </summary>
     class parcelle
     {
         List<char> parcelles;
-        private string Nom;
-        private string type;
-        private double taille;
+        
 
         char[,] TabCarte = new char[12, 12];
-
+        /// <summary>
+        /// Constructeur Affichage_liste_parcelle de la class parcelle <see cref="Le_rhum_de_Guybrush_master.parcelle"/>
+        /// </summary>
+        /// <param name="carte"></param>
+        /// Le parametre carte contient la carte Claire
+        
         public void Affichage_liste_parcelle(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
@@ -26,7 +32,7 @@ namespace Le_rhum_de_Guybrush_master
 
             for (x = 0; x < 99; x++)
             {
-                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide
 
                 if (CarteChar[n] == 'a' + i)
 
@@ -55,11 +61,18 @@ namespace Le_rhum_de_Guybrush_master
             Console.WriteLine();
         }
 
+        /// <summary>
+        /// Constructeur Taille_d_une_parcelle de la class parcelle <see cref="Le_rhum_de_Guybrush_master.parcelle"/>
+        /// </summary>
+        /// <param name="carte"></param>
+        /// <param name="Lettre"></param>
+        /// Le paramettre carte contient la carte Claire
+        /// Le paramettre Lettre permet de spécifier de quelle parcelle on veut connaitre la taille
         public void Taille_d_une_parcelle(string carte, char Lettre)
         {
             char[] CarteChar = carte.ToCharArray();
             int x;
-            int y;
+          
             int n = 0;
             int i = 0;
             int compt = 0;
@@ -69,12 +82,10 @@ namespace Le_rhum_de_Guybrush_master
 
 
 
-            //    Console.WriteLine("Quelle lettre cherchez-vous ?");
-            //    char lettre = Convert.ToChar(Console.ReadLine());
 
             for (x = 0; x < 99; x++)
             {
-                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide
                 {
                     if (CarteChar[n] == 'a' + i)
 
@@ -93,7 +104,7 @@ namespace Le_rhum_de_Guybrush_master
             for (n = 0; n < 99; n++)
             {
 
-                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide
                 {
                     if ((CarteChar[n].Equals(Lettre)) == true)
                     {
@@ -116,6 +127,13 @@ namespace Le_rhum_de_Guybrush_master
             }
         }
 
+        /// <summary>
+        /// Constructeur Affichage_Borne_Sup de la class parcelle <see cref="Le_rhum_de_Guybrush_master.parcelle"/>
+        /// </summary>
+        /// <param name="carte"></param>
+        /// <param name="Borne"></param>
+        /// Le paramettre carte contient la carte Claire
+        /// Le paramettre Borne permet de choisir à partir de quelle taille on affiche une parcelle
         public void Affichage_Borne_Sup(string carte, int Borne)
         {
 
@@ -130,17 +148,15 @@ namespace Le_rhum_de_Guybrush_master
 
 
 
-            //    Console.WriteLine("Quelle lettre cherchez-vous ?");
-            //    char lettre = Convert.ToChar(Console.ReadLine());
 
             for (x = 0; x < 99; x++)
             {
-                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide 
                 {
                     if (CarteChar[n] == 'a' + i)
 
                     {
-                        parcelles.Add(CarteChar[n]);
+                        parcelles.Add(CarteChar[n]);// Ajoute les parcelles dans une liste 
                         i++;
                         n++;
                     }
@@ -156,7 +172,7 @@ namespace Le_rhum_de_Guybrush_master
                 for (n = 0; n < 99; n++)
                 {
 
-                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caracteres vide 
                     {
                         if ((CarteChar[n].Equals(parcelles[i])) == true)
                         {
@@ -165,16 +181,16 @@ namespace Le_rhum_de_Guybrush_master
                         }
                     }
                 }
-                if (compt >= Borne)
+                if (compt >= Borne)//Condition pour afficher les parcelles au dessus de Borne 
                 {                    
                     Console.WriteLine("Parcelle {1}: {0} unites", compt, parcelles[i]);
                      
                     compt = 0;
-                    Compteur++;
+                    Compteur++;//nombreur de parcelle au dessus de Borne
                 }
                 else
                     
-                compt = 0;
+                compt = 0;//compteur d'unité de parcelle
                 
             }
             if (Compteur == 0)
@@ -183,11 +199,15 @@ namespace Le_rhum_de_Guybrush_master
             }
         }
 
+        /// <summary>
+        /// Constructeur  Aire_de_l_ile de la class parcelle <see cref="Le_rhum_de_Guybrush_master.parcelle"/>
+        /// </summary>
+        /// <param name="carte"></param>
+        /// Le paramettre carte contient la carte Claire
         public void Aire_de_l_ile(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
             int x;
-            int y;
             int n = 0;
             int i = 0;
             int compt = 0;
