@@ -2,24 +2,36 @@
 using System.IO;
 
 namespace Le_rhum_de_Guybrush_master
-{
+{ 
+    /// <summary>
+    /// Menu pour le Projet
+    /// </summary>
     class Program
-    {
+    { /// <summary>
+      /// Déconnexion du menu
+      /// </summary>
         public static void Quitter()
         {
             Console.WriteLine("------------------------------------------------------------------");
             Console.WriteLine("---------------Voulez vous quittez ? oui / non -------------------");
             Console.WriteLine("------------------------------------------------------------------");
         }
+        
         public static void Deco()
         {
             Console.WriteLine("------------------------------------------------------------------");
         }
+
+        /// <summary>
+        /// Page d'accueil avec séléction 
+        /// </summary>
+   
         static void Main(string[] args)
         {
+            
             string carteClaire = File.ReadAllText(@"../../../../../map.claire.txt");
-           // string carteChiffre = File.ReadAllText(@"../../../../../map.chiffre.txt");
-
+          
+           
             bool menu = true;
             while (menu == true)
             {
@@ -48,7 +60,7 @@ namespace Le_rhum_de_Guybrush_master
                     /*--------------------------------------------------------------------------------------*/
 
 
-
+                  
                     Console.WriteLine();
 
                     //Carte Chiffré
