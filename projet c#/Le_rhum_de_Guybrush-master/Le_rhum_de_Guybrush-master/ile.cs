@@ -138,7 +138,7 @@ namespace Le_rhum_de_Guybrush_master
 
 
             int[,] Carte = new int[10, 10]; // carte 
-            char[,] CarteX = new char[10, 10];
+            char[,] CarteX = new char[10, 10];// Carte pour le déchiffrement
 
 
             for (y = 0; y < 10; y++)
@@ -146,16 +146,16 @@ namespace Le_rhum_de_Guybrush_master
                 for (x = 0; x < 10; x++)
                 {
 
-                    if (Carte[y, x] >= 64)
+                    if (Carte[y, x] >= 64)// pour Mer
                     {
                         CarteX[y, x] = 'M';
                     }
-                    if (Carte[y, x] >= 32 && Carte[y, x] < 64)
+                    if (Carte[y, x] >= 32 && Carte[y, x] < 64)// pour Foret
                     {
                         CarteX[y, x] = 'F';
                     }
 
-                    if (Carte[y, x] > 0 && Carte[y, x] < 15)
+                    if (Carte[y, x] > 0 && Carte[y, x] < 15)//pour les parcelles (phase de test encore)
                     {
                         if (Carte[y, x] == 1 + 2 | Carte[y, x] == 2 | Carte[y, x] == 4 + 2) //1= 2^0 et 2= 2^1
                         {
