@@ -3,7 +3,9 @@ using System.Collections.Generic;
 using System.IO;
 
 namespace Le_rhum_de_Guybrush_master
-{
+{/// <summary>
+/// Class ile: Modélise une ile
+/// </summary>
     class ile
     {
         char[,] TabCarte = new char[12, 12];
@@ -14,17 +16,21 @@ namespace Le_rhum_de_Guybrush_master
         int y;
         int n;
 
-
+        /// <summary>
+        /// Constructeur chiffrement de la carte de la classe ile<see cref="Le_rhum_de_Guybrush_master.ile"/>
+        /// </summary>
+        /// <param name="carte"></param>
+        /// Le parametre carte contient la carte Claire.
         public void Chiffrement(string carte)
         {
-            char[] CarteChar = carte.ToCharArray();
+            char[] CarteChar = carte.ToCharArray();//on récupre la carte Claire dans un tableau une dimension
 
 
-            for (y = 1; y < 11; y++)
+            for (y = 1; y < 11; y++)// Avec cette bouclle on transfére le tableau une dimension dans un tableau deux dimension
             {
                 for (x = 1; x < 11; x++)
                 {
-                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide 
                     TabCarte[y, x] = CarteChar[n];
                     n++;
                 }
@@ -35,7 +41,7 @@ namespace Le_rhum_de_Guybrush_master
             {
                 for (x = 1; x < 11; x++)
                 {
-                    if ((TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('M')) == true)
+                    if ((TabCarte[y, x].Equals(TabCarte[y, x + 1]) && !TabCarte[y, x].Equals('M')) == true)//equal= compare les deux valaurs car == ne fonctionne pas
 
                     {
                         CarteX[y, x] = 0;
@@ -75,7 +81,7 @@ namespace Le_rhum_de_Guybrush_master
                 for (x = 1; x < 11; x++)
                 {
 
-                    if ((TabCarte[y, x].Equals('M') && TabCarte[y, x].Equals(TabCarte[y, x - 1]) || TabCarte[y, x].Equals('F') && TabCarte[y, x].Equals(TabCarte[y, x - 1])) == true)
+                    if ((TabCarte[y, x].Equals('M') && TabCarte[y, x].Equals(TabCarte[y, x - 1]) || TabCarte[y, x].Equals('F') && TabCarte[y, x].Equals(TabCarte[y, x - 1])) == true)//equal= compare les deux valaurs car == ne fonctionne pas
                     {
                         CarteXm[y, x] = 0;
                     }
@@ -120,6 +126,10 @@ namespace Le_rhum_de_Guybrush_master
                 Console.WriteLine("|");
             }
         }
+       /// <summary>
+       ///  Constructeur déchiffrement de la carte de la class ile<see cref="Le_rhum_de_Guybrush_master.ile"/>
+       /// </summary>
+ 
         public void Dechiffrement(string carte)
         {
 
@@ -146,11 +156,11 @@ namespace Le_rhum_de_Guybrush_master
                 for (x = 0; x < 10; x++)
                 {
 
-                    if (Carte[y, x] >= 64)// pour Mer
+                    if (Carte[y, x] >= 64)// Permet de déduire une Mer
                     {
                         CarteX[y, x] = 'M';
                     }
-                    if (Carte[y, x] >= 32 && Carte[y, x] < 64)// pour Foret
+                    if (Carte[y, x] >= 32 && Carte[y, x] < 64)// Permet de déduire une Foret
                     {
                         CarteX[y, x] = 'F';
                     }
@@ -198,7 +208,7 @@ namespace Le_rhum_de_Guybrush_master
                 for (x = 0; x < 10; x++)
                 {
 
-                    Console.Write("{0}", CarteX[y, x]);
+                    Console.Write("{0}", CarteX[y, x]);//Affichage du tableau
                 }
                 Console.WriteLine();
 
@@ -207,6 +217,11 @@ namespace Le_rhum_de_Guybrush_master
 
 
         }
+        /// <summary>
+        /// Affichage de la carte Claire
+        /// </summary>
+        /// <param name="carte"></param>
+        /// Le paramtre carte contient la carte Claire
         public void Afficher_Ile(string carte)
         {
             char[] CarteChar = carte.ToCharArray();
@@ -216,7 +231,7 @@ namespace Le_rhum_de_Guybrush_master
             {
                 for (x = 1; x < 11; x++)
                 {
-                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;
+                    while (CarteChar[n] == '\n' || CarteChar[n] == '\r') n++;//élimination des caractéres vide
                     TabCarte[y, x] = CarteChar[n];
                     n++;
                 }
