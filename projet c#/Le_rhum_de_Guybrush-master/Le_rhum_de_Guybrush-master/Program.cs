@@ -28,6 +28,8 @@ namespace Le_rhum_de_Guybrush_master
                 Console.WriteLine("--------------------1.Chiffrement --------------------------------");
                 Console.WriteLine("--------------------2.Déchiffrement-------------------------------");
                 Console.WriteLine("--------------------3.Afficher la carte --------------------------");
+                Console.WriteLine("--------------------4.Liste Parcelle -----------------------------");
+
                 Deco();
                 double choix;
                 choix = Convert.ToDouble(Console.ReadLine());
@@ -125,6 +127,14 @@ namespace Le_rhum_de_Guybrush_master
                         Console.Clear();
                     }
                 }
+
+                else if (choix == 4)
+                {
+                    parcelle Liste = new parcelle();
+                    Liste.Affichage_liste_parcelle(carteClaire);
+                }
+
+
                 else
                 {
                     Deco();
